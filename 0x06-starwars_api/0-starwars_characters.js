@@ -15,7 +15,7 @@ function makeRequest (url) {
 
 async function getMovieCharacters (movieId) {
   try {
-    const movieUrl = 'https://swapi-api.alx-tools.com/api/films/${movieId}';
+    const movieUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
     const movieData = await makeRequest(movieUrl);
 
     const characterPromises = movieData.characters.map(url => makeRequest(url));
